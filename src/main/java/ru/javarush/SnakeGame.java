@@ -58,7 +58,7 @@ public class SnakeGame extends Game {
     }
 
     @Override
-    public void onTurn(int step) { // что это за метод ? ?? ??? видимо запускает цикл движения змеи
+    public void onTurn(int step) { // метод запускает цикл движения змеи
         snake.move(apple);
 
         if (!apple.isAlive) {

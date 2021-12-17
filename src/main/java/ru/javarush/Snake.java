@@ -24,7 +24,6 @@ public class Snake {
     }
 
     public void draw(Game game) { // закрашивает поле у игровой таблицы ТАМ, где змея
-        // переделать с помощью цикла FOR
         Color color = isAlive ? Color.BLACK : Color.RED;
 
         for (int i = 0; i < snakeParts.size(); i++) {
@@ -32,17 +31,6 @@ public class Snake {
             String typeSing = i != 0 ? BODY_SIGN : HEAD_SIGN;
             game.setCellValueEx(part.x, part.y, Color.NONE, typeSing, color, 75);
         }
-
-        // в if else НИЖЕ - ПРОГРАММА НЕ ПРОРИСОВЫВАЕТ ОСТАЛЬНУЮ ЧАСТЬ ЗМЕИ, НО ОНА ЕСТЬ ! !! !!!
-//        if (isAlive == false) {
-//            game.setCellValueEx(snakeParts.get(0).x, snakeParts.get(0).y, Color.NONE, HEAD_SIGN, Color.RED, 75);
-//            game.setCellValueEx(snakeParts.get(1).x, snakeParts.get(1).y, Color.NONE, BODY_SIGN, Color.RED, 75);
-//            game.setCellValueEx(snakeParts.get(2).x, snakeParts.get(2).y, Color.NONE, BODY_SIGN, Color.RED, 75);
-//        } else {
-//            game.setCellValueEx(snakeParts.get(0).x, snakeParts.get(0).y, Color.NONE, HEAD_SIGN, Color.BLACK, 75);
-//            game.setCellValueEx(snakeParts.get(1).x, snakeParts.get(1).y, Color.NONE, BODY_SIGN, Color.BLACK, 75);
-//            game.setCellValueEx(snakeParts.get(2).x, snakeParts.get(2).y, Color.NONE, BODY_SIGN, Color.BLACK, 75);
-//        }
 
     }
 
